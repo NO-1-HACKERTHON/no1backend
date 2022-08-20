@@ -1,7 +1,8 @@
 package com.no1.calender.service;
 
-import com.no1.calender.domain.Authority;
-import com.no1.calender.domain.Member;
+import com.no1.calender.domain.calender.Calender;
+import com.no1.calender.domain.member.Authority;
+import com.no1.calender.domain.member.Member;
 import com.no1.calender.dto.Member.MemberDto;
 import com.no1.calender.exception.DuplicateMemberException;
 import com.no1.calender.repository.MemberRepository;
@@ -29,6 +30,10 @@ public class MemberService {
                 .authorityName("ROLE_USER")
                 .build();
 
+        Calender calender = Calender.builder()
+                .likeCalender(null)
+                .build();
+
         Member member = Member.builder()
                 .email(memberDto.getEmail())
                 .password(passwordEncoder.encode(memberDto.getPassword()))
@@ -36,6 +41,7 @@ public class MemberService {
                 .hashtags(null)
                 .authorities(Collections.singleton(authority))
                 .activated(true)
+                .calender(calender)
                 .build();
 
         return MemberDto.from(memberRepository.save(member));

@@ -1,6 +1,6 @@
 package com.no1.calender.repository;
 
-import com.no1.calender.domain.Member;
+import com.no1.calender.domain.member.Member;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 

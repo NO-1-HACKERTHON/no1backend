@@ -1,4 +1,4 @@
-package com.no1.calender.domain;
+package com.no1.calender.domain.member;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

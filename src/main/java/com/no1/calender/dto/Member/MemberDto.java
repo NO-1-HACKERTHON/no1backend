@@ -1,8 +1,8 @@
 package com.no1.calender.dto.Member;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.no1.calender.domain.Hashtag;
-import com.no1.calender.domain.Member;
+import com.no1.calender.domain.member.Hashtag;
+import com.no1.calender.domain.member.Member;
 import lombok.*;
 
 import javax.validation.constraints.NotNull;

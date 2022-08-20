@@ -1,6 +1,6 @@
 package com.no1.calender.service;
 
-import com.no1.calender.domain.Member;
+import com.no1.calender.domain.member.Member;
 import com.no1.calender.repository.MemberRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
