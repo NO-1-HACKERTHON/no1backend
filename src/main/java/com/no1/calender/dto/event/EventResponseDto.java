@@ -3,12 +3,14 @@ package com.no1.calender.dto.event;
 import com.no1.calender.domain.event.Event;
 import com.no1.calender.domain.event.EventHashTag;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
 import java.util.List;
 
 @Getter
 @AllArgsConstructor
+@Builder
 public class EventResponseDto {
     private Long eventId;
 

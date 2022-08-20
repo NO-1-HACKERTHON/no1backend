@@ -22,7 +22,8 @@ public class EventService {
 
     @Transactional
     public List<EventResponseDto> findMainEvents() {
-        return eventRepository.findAllBy();
+        List<Event> events = eventRepository.findAll();
+        return events.stream().map(EventResponseDto::new).collect(Collectors.toList());
     }
 
     @Transactional

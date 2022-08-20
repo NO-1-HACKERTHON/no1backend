@@ -41,7 +41,7 @@ public class Event {
     @ManyToOne(fetch = FetchType.LAZY)
     private Calender calender;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.LAZY)
     @JsonBackReference
     private List<EventHashTag> eventHashTags;
 }

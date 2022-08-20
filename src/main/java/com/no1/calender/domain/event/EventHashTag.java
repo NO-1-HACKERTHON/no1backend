@@ -20,7 +20,7 @@ public class EventHashTag {
 
     private String eventHashTag;
 
-    @JsonManagedReference
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonManagedReference
     private Event event;
 }
