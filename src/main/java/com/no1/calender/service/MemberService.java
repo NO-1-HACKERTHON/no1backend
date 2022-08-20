@@ -3,7 +3,7 @@ package com.no1.calender.service;
 import com.no1.calender.domain.calender.Calender;
 import com.no1.calender.domain.member.Authority;
 import com.no1.calender.domain.member.Member;
-import com.no1.calender.dto.Member.MemberDto;
+import com.no1.calender.dto.member.MemberDto;
 import com.no1.calender.exception.DuplicateMemberException;
 import com.no1.calender.repository.MemberRepository;
 import com.no1.calender.util.SecurityUtil;
@@ -38,7 +38,7 @@ public class MemberService {
                 .email(memberDto.getEmail())
                 .password(passwordEncoder.encode(memberDto.getPassword()))
                 .nickname(memberDto.getNickname())
-                .hashtags(null)
+                .memberHashTags(null)
                 .authorities(Collections.singleton(authority))
                 .activated(true)
                 .calender(calender)

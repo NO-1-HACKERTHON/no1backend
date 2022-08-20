@@ -1,5 +1,7 @@
-package com.no1.calender.domain;
+package com.no1.calender.domain.event;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.no1.calender.domain.calender.Calender;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,8 +9,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,14 +30,18 @@ public class Event {
 
     private String duration;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date startTime;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date endTime;
 
     private String place;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Calender calender;
+
+    @OneToMany(fetch = FetchType.EAGER)
+    @JsonBackReference
+    private List<EventHashTag> eventHashTags;
 }

@@ -5,7 +5,6 @@ import com.no1.calender.domain.calender.Calender;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
 
@@ -28,7 +27,7 @@ public class Member extends BaseEntity {
     private boolean activated;
 
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    private List<Hashtag> hashtags;
+    private List<MemberHashTag> memberHashTags;
 
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "calenderId")

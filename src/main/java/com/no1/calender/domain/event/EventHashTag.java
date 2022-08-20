@@ -1,6 +1,8 @@
-package com.no1.calender.domain.member;
+package com.no1.calender.domain.event;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,13 +12,15 @@ import javax.persistence.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Hashtag {
+@Builder
+public class EventHashTag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long tagId;
+    private Long eventHashTagId;
 
-    private String hashtag;
+    private String eventHashTag;
 
+    @JsonManagedReference
     @ManyToOne(fetch = FetchType.LAZY)
-    private Member member;
+    private Event event;
 }

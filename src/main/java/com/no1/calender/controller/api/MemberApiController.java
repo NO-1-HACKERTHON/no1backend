@@ -1,8 +1,8 @@
 package com.no1.calender.controller.api;
 
-import com.no1.calender.dto.Member.LoginDto;
-import com.no1.calender.dto.Member.MemberDto;
-import com.no1.calender.dto.Member.TokenDto;
+import com.no1.calender.dto.member.LoginDto;
+import com.no1.calender.dto.member.MemberDto;
+import com.no1.calender.dto.member.TokenDto;
 import com.no1.calender.jwt.JwtFilter;
 import com.no1.calender.jwt.TokenProvider;
 import com.no1.calender.service.MemberService;

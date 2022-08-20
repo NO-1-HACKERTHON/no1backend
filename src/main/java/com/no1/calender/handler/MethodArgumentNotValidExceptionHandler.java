@@ -1,6 +1,6 @@
 package com.no1.calender.handler;
 
-import com.no1.calender.dto.Member.ErrorDto;
+import com.no1.calender.dto.member.ErrorDto;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.validation.BindingResult;

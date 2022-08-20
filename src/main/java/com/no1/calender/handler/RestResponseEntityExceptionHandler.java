@@ -1,6 +1,6 @@
 package com.no1.calender.handler;
 
-import com.no1.calender.dto.Member.ErrorDto;
+import com.no1.calender.dto.member.ErrorDto;
 import com.no1.calender.exception.DuplicateMemberException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;

@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing
 public class No1backendApplication extends SpringBootServletInitializer {
 
+    // ec2 404에러 해결 코드
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(No1backendApplication.class);
@@ -18,5 +19,4 @@ public class No1backendApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(No1backendApplication.class, args);
     }
-
 }

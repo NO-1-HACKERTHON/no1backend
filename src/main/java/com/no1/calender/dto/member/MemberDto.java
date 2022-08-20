@@ -1,7 +1,7 @@
-package com.no1.calender.dto.Member;
+package com.no1.calender.dto.member;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.no1.calender.domain.member.Hashtag;
+import com.no1.calender.domain.member.MemberHashTag;
 import com.no1.calender.domain.member.Member;
 import lombok.*;
 
@@ -31,7 +31,7 @@ public class MemberDto {
     @Size(min = 3, max = 100)
     private String password;
 
-    private List<Hashtag> hashtags;
+    private List<MemberHashTag> memberHashTags;
 
     private Set<AuthorityDto> authorityDtoSet;
 
@@ -41,7 +41,7 @@ public class MemberDto {
         return MemberDto.builder()
                 .email(member.getEmail())
                 .nickname(member.getNickname())
-                .hashtags(member.getHashtags())
+                .memberHashTags(member.getMemberHashTags())
                 .authorityDtoSet(member.getAuthorities().stream()
                         .map(authority -> AuthorityDto.builder().authorityName(authority.getAuthorityName()).build())
                         .collect(Collectors.toSet()))

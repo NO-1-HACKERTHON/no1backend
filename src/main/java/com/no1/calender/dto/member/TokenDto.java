@@ -1,4 +1,4 @@
-package com.no1.calender.dto.Member;
+package com.no1.calender.dto.member;
 
 import lombok.*;
 

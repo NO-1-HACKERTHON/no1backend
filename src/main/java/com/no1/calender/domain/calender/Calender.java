@@ -1,6 +1,6 @@
 package com.no1.calender.domain.calender;
 
-import com.no1.calender.domain.Event;
+import com.no1.calender.domain.event.Event;
 import com.no1.calender.domain.member.Member;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
