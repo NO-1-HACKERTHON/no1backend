@@ -1,0 +1,10 @@
+server:
+  port: 1111
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://db-no1backend.cpadiqsprb8b.ap-northeast-2.rds.amazonaws.com:3306
+    username: admin
+    password: rejin0421
+
