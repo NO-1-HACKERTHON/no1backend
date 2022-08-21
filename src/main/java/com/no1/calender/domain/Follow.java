@@ -1,7 +1,6 @@
 package com.no1.calender.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.no1.calender.domain.member.Member;
 import lombok.Builder;
 import lombok.Getter;
